@@ -1,2 +1,7 @@
-package com.aor.numbers;public class GenericListDeduplicator {
+package com.aor.numbers;
+
+import java.util.List;
+
+public interface GenericListDeduplicator {
+    public List<Integer> deduplicate(List<Integer> list);
 }

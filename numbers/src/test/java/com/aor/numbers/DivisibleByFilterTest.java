@@ -1,2 +1,4 @@
-package com.aor.numbers;public class DivisibleByFilterTest {
+package com.aor.numbers;
+
+public class DivisibleByFilterTest {
 }

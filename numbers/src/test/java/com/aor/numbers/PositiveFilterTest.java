@@ -1,2 +1,4 @@
-package com.aor.numbers;public class PositiveFilterTest {
+package com.aor.numbers;
+
+public class PositiveFilterTest {
 }
