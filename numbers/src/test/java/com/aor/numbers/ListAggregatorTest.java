@@ -75,7 +75,7 @@ public class ListAggregatorTest {
     }
 
     @Test
-    public void max_bug_8726() {
+    public void distinct_bug_8726() {
         List<Integer> list = Arrays.asList(1,2,4,2);
         class StubListDeduplicator implements GenericListDeduplicator{
             @Override public List<Integer> deduplicate(List<Integer> list) {
@@ -87,4 +87,6 @@ public class ListAggregatorTest {
         int distinct = aggregator.distinct(list, deduplicator);
         Assertions.assertEquals(3, distinct);
     }
+
+
 }

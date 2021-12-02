@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ListAggregatorTest" tests="9" skipped="0" failures="1" errors="0" timestamp="2021-11-27T14:04:08" hostname="DESKTOP-L5DD3BH" time="0.529">
+  <properties/>
+  <testcase name="Check if the sum of [1, 2] is equal to 3" classname="ListAggregatorTest" time="0.029"/>
+  <testcase name="Check if the sum of [2, 1, 2] is equal to 5" classname="ListAggregatorTest" time="0.0"/>
+  <testcase name="Check if the max of [1, -4, 2] is 2" classname="ListAggregatorTest" time="0.001"/>
+  <testcase name="Check if the max of [2, 1, 2] is 2" classname="ListAggregatorTest" time="0.0"/>
+  <testcase name="Check if the max of [1, 2, 4, 6, 1, 0] is 6" classname="ListAggregatorTest" time="0.001"/>
+  <testcase name="Check if the min of [1, -4, 2] is -4" classname="ListAggregatorTest" time="0.0"/>
+  <testcase name="Check if the min of [2, 1, 2] is 1" classname="ListAggregatorTest" time="0.001"/>
+  <testcase name="Check if the min of [1, -2, 4, 6, 1, 0] is -2" classname="ListAggregatorTest" time="0.001"/>
+  <testcase name="Check if the number of distinct elements in #lista is #finallist" classname="ListAggregatorTest" time="0.483">
+    <failure message="Condition not satisfied:&#10;&#10;aggregator.distinct([1,1,2],deduplicator) == 2&#10;|          |                |             |&#10;|          0                |             false&#10;|                           Mock for type 'GenericListDeduplicator' named 'deduplicator'&#10;&lt;com.aor.numbers.ListAggregator@c39062a&gt;&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
+
+aggregator.distinct([1,1,2],deduplicator) == 2
+|          |                |             |
+|          0                |             false
+|                           Mock for type 'GenericListDeduplicator' named 'deduplicator'
+&lt;com.aor.numbers.ListAggregator@c39062a&gt;
+
+	at ListAggregatorTest.Check if the number of distinct elements in #lista is #finallist(ListAggregatorTest.groovy:54)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
