@@ -1,5 +1,7 @@
 import com.aor.numbers.GenericListDeduplicator
 import com.aor.numbers.ListAggregator
+import com.aor.numbers.ListDeduplicator
+import com.aor.numbers.ListSorter
 import spock.lang.Specification
 
 class ListAggregatorTest extends Specification{
@@ -39,21 +41,41 @@ class ListAggregatorTest extends Specification{
         where:
         finallist << [-4,1,-2]
         lista << [[1,-4,2],[2,1,2],[1,-2,4,6,1,0]]
+
     }
 
     def "Check if the number of distinct elements in #lista is #finallist"(){
 
         given:
-        GenericListDeduplicator deduplicator = Stub()
-        deduplicator.deduplicate(Arrays.asList([1,1,2])) >> Arrays.asList([1,2])
+        def aggregator = new ListAggregator()
+        def deduplicator = new ListDeduplicator(new ListSorter())
 
         when:
-        def aggregator = new ListAggregator()
+        def distinct = aggregator.distinct(lista, deduplicator);
 
         then:
-        aggregator.distinct([1,1,2],deduplicator) == 2
+        finallist == distinct
 
+        where:
+        finallist << [3,2,5]
+        lista << [[1,-4,2],[2,1,2],[1,-2,4,6,1,0]]
 
     }
+
+    def 'bug 7263'() {
+        given:
+        def aggregator = new ListAggregator()
+
+        when:
+        def max = aggregator.max(lista)
+
+        then:
+        finallist == max
+
+        where:
+        finallist << [4,2,5]
+        lista << [[-1,-4,-2],[-2,-1,-2],[-1,-2,-4,-6,-1,0]]
+    }
+
 
 }
