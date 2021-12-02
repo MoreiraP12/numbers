@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - ListSorterTest</title>
+<title>Test results - Class DivisibleByFilterSpockTest</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>ListSorterTest</h1>
+<h1>Class DivisibleByFilterSpockTest</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/com.aor.numbers.html">com.aor.numbers</a> &gt; ListSorterTest</div>
+<a href="../packages/default-package.html">default-package</a> &gt; DivisibleByFilterSpockTest</div>
 <div id="summary">
 <table>
 <tr>
@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">2</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.002s</div>
+<div class="counter">1.004s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,10 +61,46 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="accept divide by 2"></a>
+<h3 class="failures">accept divide by 2</h3>
+<span class="code">
+<pre>Condition not satisfied:
+
+notDivisible.every {it -&gt; !filter.accept(it) }
+|            |
+|            false
+[0, 3, 6, 9, 33, 333, 666]
+
+	at DivisibleByFilterSpockTest.accept divide by 2(DivisibleByFilterSpockTest.groovy:21)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="accept divide by 3"></a>
+<h3 class="failures">accept divide by 3</h3>
+<span class="code">
+<pre>Condition not satisfied:
+
+notDivisible.every {it -&gt; !filter.accept(it) }
+|            |
+|            false
+[0, 2, 4, 8, 240, 1000, 10000]
+
+	at DivisibleByFilterSpockTest.accept divide by 3(DivisibleByFilterSpockTest.groovy:34)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -75,14 +111,14 @@
 </tr>
 </thead>
 <tr>
-<td class="success">bug_sort_8276()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
+<td class="failures">accept divide by 2</td>
+<td class="failures">0.995s</td>
+<td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">sort()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
+<td class="failures">accept divide by 3</td>
+<td class="failures">0.009s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>

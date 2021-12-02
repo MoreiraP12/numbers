@@ -2,6 +2,7 @@ import com.aor.numbers.DivisibleByFilter
 import spock.lang.Specification
 
 class DivisibleByFilterSpockTest extends Specification {
+    private def lista3,lista2;
 
     def setup() {
         lista2 = Arrays.asList(0, 2, 4, 8, 240, 1000, 10000)

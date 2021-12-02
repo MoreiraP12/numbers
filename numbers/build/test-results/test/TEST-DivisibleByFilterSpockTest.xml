@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DivisibleByFilterSpockTest" tests="2" skipped="0" failures="2" errors="0" timestamp="2021-12-02T22:47:07" hostname="DESKTOP-L5DD3BH" time="1.004">
+  <properties/>
+  <testcase name="accept divide by 2" classname="DivisibleByFilterSpockTest" time="0.995">
+    <failure message="Condition not satisfied:&#10;&#10;notDivisible.every {it -&gt; !filter.accept(it) }&#10;|            |&#10;|            false&#10;[0, 3, 6, 9, 33, 333, 666]&#10;" type="org.spockframework.runtime.ConditionNotSatisfiedError">Condition not satisfied:
+
+notDivisible.every {it -&gt; !filter.accept(it) }
+|            |
+|            false
+[0, 3, 6, 9, 33, 333, 666]
+
+	at DivisibleByFilterSpockTest.accept divide by 2(DivisibleByFilterSpockTest.groovy:21)
+</failure>
+  </testcase>
+  <testcase name="accept divide by 3" classname="DivisibleByFilterSpockTest" time="0.009">
+    <failure message="Condition not satisfied:&#10;&#10;notDivisible.every {it -&gt; !filter.accept(it) }&#10;|            |&#10;|            false&#10;[0, 2, 4, 8, 240, 1000, 10000]&#10;" type="org.spockframework.runtime.ConditionNotSatisfiedError">Condition not satisfied:
+
+notDivisible.every {it -&gt; !filter.accept(it) }
+|            |
+|            false
+[0, 2, 4, 8, 240, 1000, 10000]
+
+	at DivisibleByFilterSpockTest.accept divide by 3(DivisibleByFilterSpockTest.groovy:34)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

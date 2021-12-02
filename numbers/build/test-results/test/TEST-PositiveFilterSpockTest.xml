@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PositiveFilterSpockTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-12-02T22:47:08" hostname="DESKTOP-L5DD3BH" time="0.012">
+  <properties/>
+  <testcase name="Testing: accept" classname="PositiveFilterSpockTest" time="0.012">
+    <failure message="Condition not satisfied:&#10;&#10;notPositives.every {it -&gt; !filter.accept(it) }&#10;|            |&#10;|            false&#10;[0, -1, -2, -3, -10, -100, -1000]&#10;" type="org.spockframework.runtime.ConditionNotSatisfiedError">Condition not satisfied:
+
+notPositives.every {it -&gt; !filter.accept(it) }
+|            |
+|            false
+[0, -1, -2, -3, -10, -100, -1000]
+
+	at PositiveFilterSpockTest.Testing: accept(PositiveFilterSpockTest.groovy:27)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

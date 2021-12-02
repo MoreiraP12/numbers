@@ -1,16 +1,22 @@
+import com.aor.numbers.ListFilterer
 import com.aor.numbers.PositiveFilter
 import spock.lang.Specification
 
+import spock.lang.Specification
+
 class PositiveFilterSpockTest extends Specification {
-    private def positives
-    private def nonPositives
+    private def list
+    private def expected
 
     def setup() {
-        positives = Arrays.asList(1, 2,10, 1238, 12345678)
-        nonPositives = Arrays.asList(0, -1, -2, -3, -1234)
+        list = Arrays.asList(3, 2, 6, 1, 4, 5, 7)
+        expected = Arrays.asList(1, 2, 3, 4, 5, 6, 7)
     }
 
     def 'Testing: accept'() {
+        given:
+        def positives = Arrays.asList(1, 2, 3, 10, 100, 1000)
+        def notPositives = Arrays.asList(0, -1, -2, -3, -10, -100, -1000)
 
         when:
         def filter = new PositiveFilter()
@@ -18,6 +24,6 @@ class PositiveFilterSpockTest extends Specification {
         then:
         positives.every {it ->  filter.accept(it) }
 
-        nonPositives.every {it -> !filter.accept(it) }
+        notPositives.every {it -> !filter.accept(it) }
     }
 }

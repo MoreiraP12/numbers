@@ -2,10 +2,16 @@ import com.aor.numbers.GenericListSorter
 import com.aor.numbers.ListDeduplicator
 import spock.lang.Specification
 
+import spock.lang.Specification
+
 class ListDeduplicatorSpockTest extends Specification {
     private def list
     private def expected
 
+    def setup() {
+        list = Arrays.asList(1,2,4,2,5)
+        expected = Arrays.asList(1,2,4,5)
+    }
 
     def 'Testing deduplicate'() {
         given:
@@ -19,14 +25,22 @@ class ListDeduplicatorSpockTest extends Specification {
 
         then:
         expected == distinct;
-
-        where:
-        expected << [[1,2,4],[1,3,7,9],[2,6]]
-        list << [[1,4,2],[7,3,1,9],[2,6]]
-
     }
 
+    def 'Testing deduplicate bug 8726'() {
+        given:
+        def sorter = Mock(GenericListSorter.class)
+        def deduplicator = new ListDeduplicator(sorter)
 
+        sorter.sort(_) >> Arrays.asList(1, 2, 2, 4)
+
+        when:
+        def distinct = deduplicator.deduplicate(Arrays.asList(1, 2, 4, 2))
+
+        then:
+        Arrays.asList(1, 2, 4) == distinct
+    }
 }
+
 
 

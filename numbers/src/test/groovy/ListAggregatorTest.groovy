@@ -73,7 +73,7 @@ class ListAggregatorTest extends Specification{
         finallist == max
 
         where:
-        finallist << [4,2,5]
+        finallist << [-1,-1,0]
         lista << [[-1,-4,-2],[-2,-1,-2],[-1,-2,-4,-6,-1,0]]
     }
 

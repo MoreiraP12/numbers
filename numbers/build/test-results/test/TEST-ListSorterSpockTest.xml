@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ListSorterSpockTest" tests="2" skipped="0" failures="1" errors="0" timestamp="2021-12-02T22:47:08" hostname="DESKTOP-L5DD3BH" time="0.045">
+  <properties/>
+  <testcase name="Testing: sort" classname="ListSorterSpockTest" time="0.006"/>
+  <testcase name="Testing deduplicate bug 8726" classname="ListSorterSpockTest" time="0.038">
+    <failure message="Condition not satisfied:&#10;&#10;Arrays.asList(1, 2, 2, 4) == sorted&#10;|      |                  |  |&#10;|      [1, 2, 2, 4]       |  [1, 2, 4, 2]&#10;class java.util.Arrays    false&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
+
+Arrays.asList(1, 2, 2, 4) == sorted
+|      |                  |  |
+|      [1, 2, 2, 4]       |  [1, 2, 4, 2]
+class java.util.Arrays    false
+
+	at ListSorterSpockTest.Testing deduplicate bug 8726(ListSorterSpockTest.groovy:33)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
